@@ -4,7 +4,7 @@
 angular.module('lunchCheck', [])
 .controller('lunchCheckController', lunchCheckController);
 
-lunchcheckController.$inject = ['$scope'];
+lunchCheckController.$inject = ['$scope'];
 
 function lunchCheckController ($scope) {
   /*
@@ -14,24 +14,22 @@ function lunchCheckController ($scope) {
   $scope.chkAndShow = function () {
   	var arr = $scope.textin.split(',');
 
-  	var elem = document.querySelector("#lunch-menu");
-
-	var elem2 = document.querySelector("#hoid");
-
+  	$scope.style = {};
+    
   	if ($scope.textin == "") {
   		$scope.msg = "Please enter data first";
-  		elem.style.borderColor = "red";
-  		elem2.style.color = "red";
+  		$scope.style.textColor = 'red';
+  		$scope.style.validation = 'error';
   	}
   	else if (arr.length > 3) {
   		$scope.msg = "Too much!";
-  		elem.style.borderColor = "green";
-  		elem2.style.color = "green";
-  	} else
+      $scope.style.textColor = 'green';
+      $scope.style.validation = 'valid';
+    }	else
   	{
   		$scope.msg = "Enjoy!";
-  		elem.style.borderColor = "green";
-  		elem2.style.color = "green";
+      $scope.style.textColor = 'green';
+      $scope.style.validation = 'valid'; 
   	}
     
   };
