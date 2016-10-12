@@ -4,6 +4,7 @@
     <title>Lunch Checker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
+	<link rel="stylesheet" href="styles/mystyle.css">
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
     </style>
@@ -17,13 +18,13 @@
          <div class="form-group">
              <input id="lunch-menu" type="text"
              placeholder="list comma separated dishes you usually have for lunch"
-             class="form-control" ng-model="textin">
+             class="form-control" ng-model="textin" ng-class="hocls1">
 			 <p>do NOT consider and empty item, i.e., , , as an item towards to the count.</p>
          </div>
          <div class="form-group">
              <button class="btn btn-default" ng-click="chkAndShow()">Check If Too Much</button>
          </div>
-         <div class="form-group message">
+         <div class="form-group message" ng-class="hocls2">
            <!-- Your message can go here. -->
            {{msg}}
          </div>

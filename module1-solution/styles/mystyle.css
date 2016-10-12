@@ -4,10 +4,10 @@
 .red {
     color: red;
 }
-.valid {
+.brdgreen {
     border: 2px solid green;
 }
-.error {
+.brdred {
     border: 2px solid red;
 }
 .note {

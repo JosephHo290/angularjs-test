@@ -14,10 +14,13 @@ function lunchCheckController ($scope) {
   $scope.chkAndShow = function () {
 	if ($scope.textin == undefined || $scope.textin == ""){
 		$scope.msg = "Please enter data first";
+		$scope.hocls1 = "brdred";
+		$scope.hocls2 = "red";
 	}  else {
 		
 	var arr = $scope.textin.split(',');
-
+	$scope.hocls1 = "brdgreen";
+	$scope.hocls2 = "green";
   	//console.log("Ho:" + $scope.textin);
 	 
   	if (arr.length > 3) {
